@@ -18,7 +18,7 @@
     },
     {
       "name": "states",
-      "url": "https://raw.githubusercontent.com/appuk/vega/master/us-10m.json",
+      "url": "https://raw.githubusercontent.com/appuk/Vega_Vis/master/us-10m.json",
       "format": {"type": "topojson", "feature": "states"},
       "transform": [
         { "type": "lookup", "from": "losses", "key": "State_Code", "fields": ["id"], "values": ["State_Code","Amount","State_Abv"] },
