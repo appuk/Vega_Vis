@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "description": "The Bar chart shows amount lost as per cause of the damage",
+  "width": 1000,
+  "data": { "url": "https://raw.githubusercontent.com/appuk/Vega_Vis/master/losses2015_transformed.csv"},
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Damage_Descp", "type": "ordinal",
+      "sort":{"op":"sum","field":"Amount"},
+      "axis": {"title": "Cause of the Damage"}
+    },
+    "x": {
+      "aggregate": "sum", "field": "Amount", "type": "quantitative",
+      "axis": {"title": "Amount"}
+    }
+  }
+}
